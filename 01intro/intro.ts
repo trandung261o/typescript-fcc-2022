@@ -5,5 +5,6 @@ let user = {
 
 console.log("Dung");
 console.log(user.name);
-console.log(user.email);
+// console.log(user.email);
 
+export { }
