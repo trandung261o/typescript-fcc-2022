@@ -8,10 +8,20 @@ interface IUser {
     getCoupon(couponname: string, value: number): number
 }
 
-const dinhdung: IUser = {
+interface IUser {
+    githubToken: string
+}
+
+interface IAdmin extends IUser {
+    role: "admin" | "ta" | "learner"
+}
+
+const dinhdung: IAdmin = {
     dbId: 1123,
     email: "tdd@gmail.com",
     userID: 1123,
+    githubToken: "github",
+    role: "admin",
     startTrial: () => {
         return "trail started";
     },
