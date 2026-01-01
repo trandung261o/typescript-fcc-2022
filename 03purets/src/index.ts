@@ -11,7 +11,7 @@ console.log("Hello world");
 // }
 
 class CUser {
-    private _courseCount = 1;
+    protected _courseCount = 1;
 
     readonly city: string = "Ninh binh";
     constructor(
@@ -40,6 +40,12 @@ class CUser {
     }
 }
 
+class SubCUser extends CUser {
+    isFamily: boolean = true;
+    changeCourseCount() {
+        this._courseCount = 4;
+    }
+}
 
 const ddung = new CUser("tdd@gmail.com", "dung");
 // ddung.name;   // error
